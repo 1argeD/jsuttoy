@@ -24,7 +24,8 @@ function ComponentDrill() {
 
     return (
         <>  
-            <h1>Todo List</h1>
+        <Container>
+        <h1>Todo List</h1>
             <input
               type="text" 
               value={item}
@@ -35,13 +36,14 @@ function ComponentDrill() {
             onClick={addTodo}>   
             추가하기
             </button>
-            <Todoscontainer>
+        </Container>
+            <TodosContainer>
                 {todos.map((todo) => (
-                    <div className="todo" key={todo.id}>
+                    <Todos key={todo.id} >
                         {todo.item}
-                    </div>
+                    </Todos>
                 ))}
-            </Todoscontainer>
+            </TodosContainer>
         </>
     )
 }
@@ -49,12 +51,22 @@ function ComponentDrill() {
 
 export default ComponentDrill
 
-const Todoscontainer = styled.div`    
-    margin: 100px;
+const Container = styled.div`
+    margin-left : 50%;
+    height : 100px;
+    aligin-items : center;
+    justify-content: center;
+`
+
+const Todos = styled.div`    
     width: 100px;
     height: 100px;
-    border: 1px solid green;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    border: 2px solid green;
+    border-radius : 8px;
+    padding : 5px;
 ` 
+
+const TodosContainer = styled.div`
+    display: flex;
+    gap 12px
+`
