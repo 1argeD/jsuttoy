@@ -8,7 +8,7 @@ function ComponentDrill() {
     const [todos, setTodos] = useState([
         {
           id: 1,
-          item: "react를 배워봅시다.",
+          item: "이게 첫 카드.",
         },
       ]);
 
@@ -24,22 +24,23 @@ function ComponentDrill() {
 
     return (
         <>  
-        <Container>
-        <h1>Todo List</h1>
+            <Container>
+            <h1>Todo List</h1>
+      
             <input
               type="text" 
               value={item}
               onChange={(event) => {
                 setItem(event.target.value)
                 }} />
-            <button
+            <Button
             onClick={addTodo}>   
             추가하기
-            </button>
-        </Container>
-            <TodosContainer>
+            </Button>
+            </Container>
+            <Todoscontainer>
                 {todos.map((todo) => (
-                    <Todos key={todo.id} >
+                    <Todos key={todo.id}>
                         {todo.item}
                     </Todos>
                 ))}
@@ -53,20 +54,25 @@ export default ComponentDrill
 
 const Container = styled.div`
     margin-left : 50%;
-    height : 100px;
-    aligin-items : center;
-    justify-content: center;
+    margin-top: 200px;
 `
 
-const Todos = styled.div`    
+const Button = styled.button`
+`
+
+const Todos = styled.div`   
     width: 100px;
     height: 100px;
     border: 2px solid green;
-    border-radius : 8px;
     padding : 5px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    display:flex;
 ` 
 
-const TodosContainer = styled.div`
-    display: flex;
-    gap 12px
+const Todoscontainer = styled.div`
+    marign : 10px;
+    display:flex;
+    gap :12px;
 `

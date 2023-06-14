@@ -1,13 +1,14 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom"
-import GrandFather from "../Component/test"
-import Main from "../Component/main"
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import GrandFather from "../Component/test";
+import Main from "../Component/main";
 import Lay from "../Component/Layout";
 import Drill from "../Component/drill"
 import Repeat from "../Component/repeat";
-import Map from "../Component/map"
+import Map from "../Component/map";
 import ComponentDrill from "../Component/componentDrill";
-
+import StyleComponent from "../Component/styleComponent";
+import UseState from "../Component/useState";
 
 
 const Ways = () => {
@@ -21,6 +22,8 @@ const Ways = () => {
                 <Route path="/repeat" element={<Repeat/>}/>
                 <Route path='/map' element={<Map />} />
                 <Route path="/componentDrill" element={<ComponentDrill/>}/>
+                <Route path="/styleComponent" element={<StyleComponent/>}/>
+                <Route path="/useState" element={<UseState/>}/>
             </Routes>
         </BrowserRouter>
     
