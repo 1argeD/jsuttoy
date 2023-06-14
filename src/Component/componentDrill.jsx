@@ -26,6 +26,7 @@ function ComponentDrill() {
         <>  
             <Container>
             <h1>Todo List</h1>
+      
             <input
               type="text" 
               value={item}
@@ -43,7 +44,7 @@ function ComponentDrill() {
                         {todo.item}
                     </Todos>
                 ))}
-            </Todoscontainer>
+            </TodosContainer>
         </>
     )
 }
