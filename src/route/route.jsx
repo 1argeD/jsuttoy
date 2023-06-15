@@ -9,6 +9,7 @@ import Map from "../Component/map";
 import ComponentDrill from "../Component/componentDrill";
 import StyleComponent from "../Component/styleComponent";
 import UseState from "../Component/useState";
+import UseEffect from "../Component/useEffect";
 
 
 const Ways = () => {
@@ -24,6 +25,7 @@ const Ways = () => {
                 <Route path="/componentDrill" element={<ComponentDrill/>}/>
                 <Route path="/styleComponent" element={<StyleComponent/>}/>
                 <Route path="/useState" element={<UseState/>}/>
+                <Route path="/useEffect" element={<UseEffect/>}/>
             </Routes>
         </BrowserRouter>
     
